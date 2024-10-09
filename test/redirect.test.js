@@ -9,7 +9,7 @@ describe('Page Redirection', () => {
       await browser.pause(2000)
       await expect(browser).toHaveUrl(`${browser.options.baseUrl}/abtest`)
       await expect(browser).toHaveTitle('The Internet')
-      await expect(abTestPage.heading).toHaveText('A/B Test Control')
+      await expect(abTestPage.heading$).toHaveText('A/B Test Control')
     })
 
     it('back to Home Page', async () => {
@@ -17,7 +17,7 @@ describe('Page Redirection', () => {
         await browser.pause(2000)
         await expect(browser).toHaveUrl(`${browser.options.baseUrl}/`)
         await expect(browser).toHaveTitle('The Internet')
-        await expect(mainPage.heading).toHaveText('Welcome to the-internet')
+        await expect(mainPage.heading$).toHaveText('Welcome to the-internet')
       })
   })
 
