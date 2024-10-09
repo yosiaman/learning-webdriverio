@@ -2,6 +2,7 @@ const { browser, $, $$ } = require('@wdio/globals')
 
 class Main {
   get listItem() { return $$('#content ul li a') }
+  get heading() { return $('h1.heading') }
 
   async clickItem(index) {
     await this.listItem[index].waitForDisplayed()
