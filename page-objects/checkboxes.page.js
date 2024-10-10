@@ -7,6 +7,7 @@ class CheckboxesPage {
   async clickFirstCheckbox(position) {
     await this.firstCheckbox.waitForDisplayed()
     await this.firstCheckbox.waitForClickable()
+    await this.firstCheckbox.moveTo()
     await this.firstCheckbox.click()
 
   }
@@ -14,6 +15,7 @@ class CheckboxesPage {
   async clickSecondCheckbox(position) {
     await this.secondCheckbox.waitForDisplayed()
     await this.secondCheckbox.waitForClickable()
+    await this.secondCheckbox.moveTo()
     await this.secondCheckbox.click()
 
   }
