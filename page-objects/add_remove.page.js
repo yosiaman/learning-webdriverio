@@ -12,6 +12,18 @@ class AddRemovePage {
     await this.addButton$.click()
   }
 
+  async clickAddButtonMultipleTime(number) {
+    await this.addButton$.waitForDisplayed()
+    await this.addButton$.waitForClickable()
+    await this.addButton$.moveTo()
+
+    let i=0
+    while (i<number) {
+      await this.addButton$.click()
+      i++
+    }
+  }
+
   /**
    * Use this only when there is only 1 delete button
    */
