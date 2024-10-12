@@ -16,7 +16,7 @@ describe('Dropdown', () => {
   })
 
   it('choose option 1', async () => {
-    await dropdownPage.clickDropdown()
+    await dropdownPage.clickDropdown()    // this actually not needed, can be bypass by directly choose option
     await dropdownPage.clickOption1()
     await expect(dropdownPage.option1$).toBeSelected()
     await expect(dropdownPage.dropdown$).toHaveValue("1")
