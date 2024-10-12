@@ -3,7 +3,7 @@ const mainPage = require('../page-objects/main.page')
 const dropdownPage = require('../page-objects/dropdown.page')
 
 describe('Dropdown', () => {
-  it('shows disabled initial value at the first time', async () => {
+  it('shows disabled initial choice at the first time', async () => {
     await browser.url('/')
     await mainPage.clickItem(10)
     await browser.pause(500)
@@ -27,5 +27,12 @@ describe('Dropdown', () => {
     await dropdownPage.clickOption2()
     await expect(dropdownPage.option2$).toBeSelected()
     await expect(dropdownPage.dropdown$).toHaveValue("2")
+  })
+  
+  it('unable to choose the initial choice', async () => {
+    await dropdownPage.clickDropdown()
+    await dropdownPage.clickInitialChoice()
+    await expect(dropdownPage.initialChoice$).not.toBeSelected()
+    await expect(dropdownPage.option2$).toBeSelected()
   })
 })

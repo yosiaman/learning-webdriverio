@@ -13,6 +13,11 @@ class DropdownPage {
     await this.dropdown$.click()
   }
 
+  async clickInitialChoice() {
+    await this.initialChoice$.waitForDisplayed()
+    await this.initialChoice$.click()
+  }
+
   async clickOption1() {
     await this.option1$.waitForDisplayed()
     await this.option1$.click()
