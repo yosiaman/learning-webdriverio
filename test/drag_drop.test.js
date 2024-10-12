@@ -10,8 +10,8 @@ describe('Drag and Drop', () => {
     await expect(browser).toHaveUrl(`${browser.options.baseUrl}/drag_and_drop`)
 
     await dragDropPage.dragBoxAToColumnB()
-    await expect(dragDropPage.columnAHeader).toHaveText('B')
-    await expect(dragDropPage.columnBHeader).toHaveText('A')
+    await expect(dragDropPage.columnAHeader$).toHaveText('B')
+    await expect(dragDropPage.columnBHeader$).toHaveText('A')
     // await browser.debug()
     // await expect($('#column-b meta')).toExist()
   })
@@ -22,8 +22,8 @@ describe('Drag and Drop', () => {
     await mainPage.clickItem(9)
     await browser.pause(500)
     await dragDropPage.dragBoxAToCoordinateColumnB(225, 0)    // get pixel coordinate with help of chrome extension "Pixel Measurement"
-    await expect(dragDropPage.columnAHeader).toHaveText('B')
-    await expect(dragDropPage.columnBHeader).toHaveText('A')
+    await expect(dragDropPage.columnAHeader$).toHaveText('B')
+    await expect(dragDropPage.columnBHeader$).toHaveText('A')
     // await expect($('#column-b meta')).toExist()
   })
 })
