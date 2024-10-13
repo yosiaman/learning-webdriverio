@@ -21,26 +21,26 @@ class DynamicLoadingPage {
 class FirstDynamicLoadingPage {
   get mainPageHeading$() { return $('.example h3') }
   get secondaryPageHeading$() { return $('.example h4') }
-  get startButton() { return $('#start button') }
-  get message() { return $('#finish h4') }
+  get startButton$() { return $('#start button') }
+  get message$() { return $('#finish h4') }
   
   async clickStartButton() {
-    await this.startButton.waitForDisplayed()
-    await this.startButton.waitForClickable()
-    await this.startButton.click()
+    await this.startButton$.waitForDisplayed()
+    await this.startButton$.waitForClickable()
+    await this.startButton$.click()
   }
 }
 
 class SecondDynamicLoadingPage {
   get mainPageHeading$() { return $('.example h3') }
   get secondaryPageHeading$() { return $('.example h4') }
-  get startButton() { return $('#start button') }
-  get message() { return $('#finish h4') }
+  get startButton$() { return $('#start button') }
+  get message$() { return $('#finish h4') }
   
   async clickStartButton() {
-    await this.startButton.waitForDisplayed()
-    await this.startButton.waitForClickable()
-    await this.startButton.click()
+    await this.startButton$.waitForDisplayed()
+    await this.startButton$.waitForClickable()
+    await this.startButton$.click()
   }
 }
 
