@@ -7,7 +7,7 @@ const {
 } = require('../page-objects/dynamic_loading.page') 
 
 describe('Dynamic Loading', () => {
-  it('open the main page', async () => {
+  it('open the dynamic loading main page', async () => {
     await browser.url('/')
     await mainPage.clickItem(13)
     await browser.pause(500)
