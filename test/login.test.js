@@ -3,7 +3,7 @@ const mainPage = require('../page-objects/main.page')
 const { loginPage, securePage} = require('../page-objects/login.page')
 const testData = require('../test-data/user.data')
 
-describe('Login Page', () => {
+describe('Login', () => {
   it('open the login page', async () => {
     await browser.url('/')
     await mainPage.clickItem(20)
