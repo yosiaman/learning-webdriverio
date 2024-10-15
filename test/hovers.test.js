@@ -31,7 +31,7 @@ describe('Hovers', () => {
     await expect(hoversPage.picLinks$$[1]).toBeClickable()
   })
 
-  it('hovers to the second image', async () => {
+  it('hovers to the third image', async () => {
     await hoversPage.hoverToPicture(2)
     await expect(hoversPage.picTitles$$[2]).toBeDisplayed()
     await expect(hoversPage.picTitles$$[2]).toHaveText('user3', { containing:true })
