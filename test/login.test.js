@@ -1,6 +1,6 @@
 const { browser, expect, $, $$ } = require('@wdio/globals')
 const mainPage = require('../page-objects/main.page')
-const { loginPage, securePage} = require('../page-objects/login.page')
+const { loginPage, securePage } = require('../page-objects/login.page')
 const testData = require('../test-data/user.data')
 
 describe('Login', () => {

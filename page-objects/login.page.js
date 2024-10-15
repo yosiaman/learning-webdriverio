@@ -29,7 +29,7 @@ class SecurePage {
   get flashMessage$() { return $('#flash') }
   get pageHeading$() { return $('.example h2') }
   get logoutButton$() { return $('a.button') }
-  get closeFMButton() { return $('#flash a') }
+  get closeFMButton$() { return $('#flash a') }
 
   async clickLogoutButton() {
     await this.logoutButton$.waitForDisplayed()
@@ -38,9 +38,9 @@ class SecurePage {
 
   // gak dipake dulu
   async closeFlashMessage() {
-    await this.closeFMButton.waitForDisplayed()
+    await this.closeFMButton$.waitForDisplayed()
     // await this.closeFMButton.waitForClickable()
-    await this.closeFMButton.click({ button:0, y:5 })
+    await this.closeFMButton$.click({ button:0, y:5 })
   }
 }
 
