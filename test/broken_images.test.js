@@ -33,11 +33,11 @@ describe('Broken Images', () => {
           img.onerror = function () {
             resolve(0)
           }
-          img.src = imageUrl    // 3. trigger the image loading process by loadng image from imageUrl
+          img.src = imageUrl    // 3. starts the image loading process by loadng image from imageUrl
         })
       }, imageUrl)
 
-      console.log(`tampilkan naturalWidth = ${await naturalWidth}`)
+      console.log(`show naturalWidth = ${await naturalWidth}`)
       assert.notEqual(naturalWidth, 0)  //assertion that image is not broken
     } catch (error) {
       console.log(`Error occured: ${error}`)
@@ -68,7 +68,7 @@ describe('Broken Images', () => {
         })
       }, imageUrl)
 
-      console.log(`tampilkan naturalWidth = ${await naturalWidth}`)
+      console.log(`show naturalWidth = ${await naturalWidth}`)
       assert.notEqual(naturalWidth, 0)  //assertion that image is not broken
     } catch (error) {
       console.log(`Error occured: ${error}`)
@@ -99,7 +99,7 @@ describe('Broken Images', () => {
         })
       }, imageUrl)
 
-      console.log(`tampilkan naturalWidth = ${await naturalWidth}`)
+      console.log(`show naturalWidth = ${await naturalWidth}`)
       assert.notEqual(naturalWidth, 0)  //assertion that image is not broken
     } catch (error) {
       console.log(`Error occured: ${error}`)
