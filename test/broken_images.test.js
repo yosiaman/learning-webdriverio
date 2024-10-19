@@ -24,7 +24,7 @@ describe('Broken Images', () => {
           }
           
           // 1. create an empty HTML Image object called img in memory (not displayed)
-          const img = new Image()   // It does not yet load any image
+          const img = new Image()   // It does not yet load any image from internet
 
           // 2. setting up event listeners (onload and onerror) before the load starts
           img.onload = function () {
