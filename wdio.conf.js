@@ -52,7 +52,7 @@ exports.config = {
     capabilities: [{
         browserName: 'chrome',
         "goog:chromeOptions": {
-            args: ['headless', 'disable-gpu'],
+            // args: ['headless', 'disable-gpu'],
             prefs: {
                 "download.default_directory": "/Users/cashbac/Playground/learning-webdriverio/downloads"
             }
